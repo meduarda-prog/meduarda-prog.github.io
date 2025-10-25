@@ -1,6 +1,5 @@
 function mostrarDemo(tipo) {
   const demo = document.getElementById(demo-${tipo});
-  // garante que exista o elemento
   if (!demo) return;
 
   // alterna visibilidade
