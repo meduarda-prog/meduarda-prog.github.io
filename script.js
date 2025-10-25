@@ -1,78 +1,22 @@
-body {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  background-color: #fff9f3;
-  color: #222;
-}
+function mostrarDemo(tipo) {
+  const demo = document.getElementById(demo-${tipo});
+  demo.style.display = demo.style.display === "block" ? "none" : "block";
 
-header {
-  background-color: #b22222;
-  color: beige;
-  text-align: center;
-  padding: 2rem;
-}
+  if (tipo === "estoque") {
+    demo.innerHTML = `
+      <strong>Simulação:</strong><br>
+      Produto: Tênis Nike Air Max<br>
+      Quantidade atual: 3<br>
+      <em>Aviso: estoque baixo!</em>
+    `;
+  }
 
-nav {
-  display: flex;
-  justify-content: center;
-  background: black;
-  flex-wrap: wrap;
-}
-nav a {
-  color: beige;
-  padding: 10px 15px;
-  text-decoration: none;
-  transition: 0.3s;
-}
-nav a:hover {
-  background-color: #b22222;
-}
-
-main {
-  padding: 2rem;
-}
-
-section {
-  margin-bottom: 2rem;
-}
-
-h2 {
-  color: #b22222;
-  border-left: 5px solid black;
-  padding-left: 10px;
-}
-
-.exp-card, .projeto {
-  background: #fdf4ec;
-  padding: 1rem;
-  border-radius: 12px;
-  margin-top: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-button {
-  background-color: #b22222;
-  color: beige;
-  border: none;
-  border-radius: 8px;
-  padding: 8px 12px;
-  cursor: pointer;
-}
-button:hover {
-  background-color: black;
-}
-
-.demo {
-  margin-top: 10px;
-  background: #fff;
-  border: 1px solid #ccc;
-  padding: 10px;
-  display: none;
-}
-
-footer {
-  background: black;
-  color: beige;
-  text-align: center;
-  padding: 1rem;
+  if (tipo === "agenda") {
+    demo.innerHTML = `
+      <strong>Simulação:</strong><br>
+      Paciente: João Silva<br>
+      Consulta marcada para 25/10/2025 às 14h.<br>
+      Status: Confirmada ✅
+    `;
+  }
 }
